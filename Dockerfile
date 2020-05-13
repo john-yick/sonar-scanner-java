@@ -9,5 +9,6 @@ RUN unzip /tmp/sonar-scanner-cli-${SONAR_SCANNER_VERSION}.zip -d /usr/lib && \
 
 ADD https://mirror.bit.edu.cn/apache/maven/maven-3/${MVN_VERSION}/binaries/apache-maven-${MVN_VERSION}-bin.zip /tmp/apache-maven-${MVN_VERSION}-bin.zip
 RUN unzip /tmp/apache-maven-${MVN_VERSION}-bin.zip
+RUN ls
 RUN export PATH=/tmp/apache-maven-${MVN_VERSION}/bin:$PATH
 RUN mvn -v
